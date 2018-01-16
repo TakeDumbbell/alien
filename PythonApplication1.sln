@@ -7,6 +7,7 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonApplication1", "Pytho
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB4C8197-2FCC-4D83-BB87-48CE8B3CBB82}"
 	ProjectSection(SolutionItems) = preProject
+		PythonApplication1\bullet.py = PythonApplication1\bullet.py
 		PythonApplication1\game_functions.py = PythonApplication1\game_functions.py
 		PythonApplication1\settings.py = PythonApplication1\settings.py
 		PythonApplication1\ship.py = PythonApplication1\ship.py
