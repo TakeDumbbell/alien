@@ -1,11 +1,16 @@
 class GameStats():
-    #¸ú×ÙÓÎÏ·µÄÍ³¼ÆĞÅÏ¢
+    #æ¸¸æˆè®¾ç½®
 
     def __init__(self,ai_settings):
-        #³õÊ¼»¯Í³¼ÆĞÅÏ¢
+        #æ¸¸æˆåŸºæœ¬è®¾ç½®
         self.ai_setttings = ai_settings
         self.reset_stats()
         self.game_active = False
+        #åœ¨ä»»ä½•æƒ…å†µéƒ½ä¸åº”è¯¥é‡ç½®æœ€é«˜å¾—åˆ†
+        self.high_score = 0
+
     def reset_stats(self):
-        #³õÊ¼»¯ÓÎÏ·ÔÚÔËĞĞÆÚ¼ä±ä»¯µÄÍ³¼ÆĞÅÏ¢
+        #åˆå§‹åŒ–æ¸¸æˆè¿›è¡Œçš„å¯èƒ½çš„è®¾ç½®
         self.ships_left = self.ai_setttings.ship_limit
+        self.score = 0
+        self.level = 1

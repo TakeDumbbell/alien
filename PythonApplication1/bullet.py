@@ -1,31 +1,30 @@
-import pygame
+ï»¿import pygame
 from pygame.sprite import Sprite
 
 class Bullet(Sprite):
 
-    #¶Ô·É´¬·¢ËÍ×Óµ¯ÀàµÄ¹ÜÀí
+    #ï¿½Ô·É´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
     def __init__(self,  ai_settings, screen, ship):
-        #ÔÚ·É´¬Ëù´¦Î»ÖÃ´´½¨Ò»¸ö×Óµ¯¶ÔÏó
+        #ï¿½Ú·É´ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½
         super(Bullet, self).__init__()
         self.screen = screen
 
-        #ÔÚ£¨0£¬0£©´¦´´½¨Ò»¸ö±íÊ¾×Óµ¯µÄ¾ØÐÎ£¬ÔÙÉèÖÃÕýÈ·µÄÎ»ÖÃ
+        #ï¿½Ú£ï¿½0ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Óµï¿½ï¿½Ä¾ï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Î»ï¿½ï¿½
         self.rect = pygame.Rect(0,0,ai_settings.bullet_width,ai_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
         
-        #´æ´¢ÓÃÐ¡Êý±íÊ¾×Óµ¯µÄÎ»ÖÃ
+        #ï¿½æ´¢ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Óµï¿½ï¿½ï¿½Î»ï¿½ï¿½
         self.y = float(self.rect.y)
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
 
     def update(self):
-        #ÏòÉÏÒÆ¶¯×Óµ¯£¬¸üÐÂ±íÊ¾×Óµ¯Î»ÖÃµÄÐ¡ÊýÖµ
+        #ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½Ê¾ï¿½Óµï¿½Î»ï¿½Ãµï¿½Ð¡ï¿½ï¿½Öµ
         self.y -= self.speed_factor
-        #¸üÐÂ±íÊ¾×Óµ¯µÄrectµÄÎ»ÖÃ
+        #ï¿½ï¿½ï¿½Â±ï¿½Ê¾ï¿½Óµï¿½ï¿½ï¿½rectï¿½ï¿½Î»ï¿½ï¿½
         self.rect.y = self.y
 
     def draw_bullet(self):
-        #ÔÚÆÁÄ»»æÖÆ×Óµ¯
+        #ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½
         pygame.draw.rect(self.screen,self.color,self.rect)
-    

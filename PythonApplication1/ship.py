@@ -1,9 +1,11 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
 
     def __init__(self, ai_settings, screen):
 
+        super(Ship, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
@@ -37,6 +39,7 @@ class Ship():
     def blitme(self):
         #飞船图像
         self.screen.blit(self.image,self.rect)
+
     def center_ship(self):
         #让飞船在屏幕居中
         self.center = self.screen_rect.centerx

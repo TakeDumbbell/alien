@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		PythonApplication1\button.py = PythonApplication1\button.py
 		PythonApplication1\game_functions.py = PythonApplication1\game_functions.py
 		PythonApplication1\game_stats.py = PythonApplication1\game_stats.py
+		PythonApplication1\scoreboard.py = PythonApplication1\scoreboard.py
 		PythonApplication1\settings.py = PythonApplication1\settings.py
 		PythonApplication1\ship.py = PythonApplication1\ship.py
 	EndProjectSection
